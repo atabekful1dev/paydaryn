@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Распознавание лица</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Оплата через распознавание лица</h1>
+        <p>Нажмите кнопку, чтобы запустить камеру.</p>
+        <button onclick="startVideo()">Запустить камеру</button>
+        <div id="video-container">
+            <img src="{{ url_for('video_feed') }}" alt="Видео">
+        </div>
+    </div>
+</body>
+<script>
+    function startVideo() {
+        document.getElementById('video-container').style.display = 'block';
+    }
+</script>
+</html>

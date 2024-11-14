@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результат</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="result-container {% if status == 'success' %} success {% else %} failure {% endif %}">
+        <h1>{{ message }}</h1>
+        <a href="{{ url_for('index') }}">Назад</a>
+    </div>
+</body>
+</html>
